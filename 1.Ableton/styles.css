@@ -1,0 +1,200 @@
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+.img {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+/* ----------------------Navbar and First Image---------------------- */
+.main-nav {
+	border-bottom: 1px solid rgb(48, 45, 45);
+}
+.main-nav a {
+	font-size: 1.20rem;
+	margin: 1.35rem 0;
+	font-weight: 500;
+}
+.logo svg {
+	width: 3.5rem;
+	height: 1.5rem;
+}
+.element {
+	padding: 0 1.35rem;
+}
+.element-right {
+	padding: 0 1rem;
+}
+.right-nav :nth-child(1) {
+	color: #0000ff;
+}
+.right-nav :nth-child(2) {
+	font-size: 1rem;
+}
+.second-nav {
+	padding: 1.3rem 2.5rem;
+}
+.second-nav a {
+	padding: 0 0.5rem;
+}
+.second-nav :nth-child(1) {
+	color: #ff764d;
+}
+.ableton-box {
+	background-image: url(./header.jpg);
+	min-height: calc(100vh - 150px);
+	margin: 0 2.5rem;
+	position: relative;
+}
+.ableton-box h1 {
+	margin: 0 auto;
+	font-size: 8vw;
+	color: #ff764d;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* -----------------------------content---------------------------- */
+.content {
+	margin: 7.5rem 2.5rem;
+}
+.text-content {
+	width: 48vw;
+	margin: 0 auto;
+	line-height: 1.5;
+}
+.content p {
+	font-size: 1.25rem;
+}
+.content span {
+	color: #0000ff;
+	text-transform: capitalize;
+}
+
+/* -------------------------------------------------------------- */
+.content-img {
+	position: relative;
+	min-height: 58vw;
+}
+.yellow-bg {
+	background-color: #fbffa7;
+	width: 58vw;
+	height: 58vw;
+	position: absolute;
+	right: 0;
+}
+.left-img {
+	background-image: url('./work.jpg');
+	display: inline-block;
+	width: 42vw;
+	height: 40vw;
+	position: relative;
+	top: 9vw;
+	margin-left: 8vw;
+}
+.right-img {
+	background-image: url('./walk.jpg');
+	display: inline-block;
+	width: 33vw;
+	height: 25vw;
+	position: relative;
+	left: 7vw;
+}
+/* -------------------------------------------------------------- */
+.video-content {
+	background-image: url('./video.jpg');
+	width: 48vw;
+	height: 30vw;
+	min-height: calc(100vh - 450px);
+	margin: 8rem auto;
+}
+/* -------------------------------------------------------------- */
+.content-img-2 {
+	position: relative;
+	min-height: 76vw;
+}
+.green-bg {
+	background-color: #b6ffc0;
+	width: 58vw;
+	height: 76vw;
+	position: absolute;
+}
+.green-top-img {
+	background-image: url('./writing.jpg');
+	width: 33vw;
+	height: 24vw;
+	margin: 9vw 0 9vw 8vw;
+}
+.green-bottom-img {
+	background-image: url('./board.jpg');
+	width: 33vw;
+	height: 24vw;
+	margin-left: 8vw;
+}
+.green-right-img {
+	background-image: url('./desksetup.jpg');
+	width: 41vw;
+	height: 41vw;
+	position: absolute;
+	top: 17vw;
+	left: 50vw;
+}
+/* ----------------------------Responsive---------------------------- */
+/* Large*/
+@media all and (min-width: 960px) {
+	.main-nav {
+		display: flex;
+		flex-wrap: nowrap;
+		padding: 0 2.5rem;
+	}
+	.left-nav,
+	.right-nav {
+		display: flex;
+		flex: 1;
+	}
+	.right-nav {
+		justify-content: flex-end;
+	}
+	.toggle {
+		display: none;
+	}
+}
+/* Medium  */
+@media all and (max-width: 960px) {
+	.main-nav {
+		padding: 1.5rem 0;
+	}
+	.logo {
+		padding: 0 1.5rem;
+	}
+	.left-nav,
+	.right-nav {
+		display: none;
+	}
+	.main-nav.active div {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+	}
+	.main-nav.active {
+		background-color: #0000ff;
+		transition: .5s ease-in-out;
+	}
+	.main-nav.active a {
+		color: white;
+	}
+}
+/* small  */
+@media all and (max-width: 770px) {
+	.text-content,
+	.video-content {
+		width: 100%;
+	}
+}
