@@ -46,7 +46,7 @@ a {
 	color: #ff764d;
 }
 .ableton-box {
-	background-image: url(./header.jpg);
+	background-image: url(./images/header.jpg);
 	min-height: calc(100vh - 150px);
 	margin: 0 2.5rem;
 	position: relative;
@@ -91,7 +91,7 @@ a {
 	right: 0;
 }
 .left-img {
-	background-image: url('./work.jpg');
+	background-image: url('./images/work.jpg');
 	display: inline-block;
 	width: 42vw;
 	height: 40vw;
@@ -100,7 +100,7 @@ a {
 	margin-left: 8vw;
 }
 .right-img {
-	background-image: url('./walk.jpg');
+	background-image: url('./images/walk.jpg');
 	display: inline-block;
 	width: 33vw;
 	height: 25vw;
@@ -109,7 +109,7 @@ a {
 }
 /* -------------------------------------------------------------- */
 .video-content {
-	background-image: url('./video.jpg');
+	background-image: url('./images/video.jpg');
 	width: 48vw;
 	height: 30vw;
 	min-height: calc(100vh - 450px);
@@ -127,19 +127,19 @@ a {
 	position: absolute;
 }
 .green-top-img {
-	background-image: url('./writing.jpg');
+	background-image: url('./images/writing.jpg');
 	width: 33vw;
 	height: 24vw;
 	margin: 9vw 0 9vw 8vw;
 }
 .green-bottom-img {
-	background-image: url('./board.jpg');
+	background-image: url('./images/board.jpg');
 	width: 33vw;
 	height: 24vw;
 	margin-left: 8vw;
 }
 .green-right-img {
-	background-image: url('./desksetup.jpg');
+	background-image: url('./images/desksetup.jpg');
 	width: 41vw;
 	height: 41vw;
 	position: absolute;
