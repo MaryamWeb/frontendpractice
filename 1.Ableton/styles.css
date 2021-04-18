@@ -59,7 +59,7 @@ a {
 }
 .ableton-box h1 {
 	margin: 0 auto;
-	font-size: 8vw;
+	font-size: 8rem;
 	color: #ff764d;
 	position: absolute;
 	top: 50%;
@@ -87,7 +87,7 @@ a {
 /* -------------------------------------------------------------- */
 .content-img {
 	position: relative;
-	min-height: 58vw;
+	height: 58vw;
 }
 .yellow-bg {
 	background-color: #fbffa7;
@@ -111,7 +111,7 @@ a {
 	width: 33vw;
 	height: 25vw;
 	position: relative;
-	left: 7vw;
+	margin-left: 7vw;
 }
 /* -------------------------------------------------------------- */
 .video-content {
@@ -124,7 +124,7 @@ a {
 /* -------------------------------------------------------------- */
 .content-img-2 {
 	position: relative;
-	min-height: 76vw;
+	height: 76vw;
 }
 .green-bg {
 	background-color: #b6ffc0;
@@ -151,20 +151,20 @@ a {
 	position: absolute;
 	top: 17vw;
 	right: 0;
-	margin-right: 6vw;
+	margin-right: 7vw;
 }
 /* -------------------------------------------------------------- */
 .device-img {
 	background-image: url("./images//device.jpg");
-	width: 80vw;
-	height: 40vw;
+	width: 83vw;
+	height: 46vw;
 	min-height: calc(100vh - 450px);
 	margin: 8rem auto;
 }
 /* -------------------------------------------------------------- */
 .content-img-3 {
 	position: relative;
-	min-height: 58vw;
+	height: 58vw;
 }
 .purple-bg {
 	background-color: #d5b3ff;
@@ -173,35 +173,34 @@ a {
 	left: 50%;
 	transform: translateX(-50%);
 	position: absolute;
-	opacity: 0.5;
 }
 .purple-left-img {
 	background-image: url("./images/library.jpg");
 	width: 33vw;
 	height: 22vw;
 	position: absolute;
-	top: 50%;
 	margin-left: 8vw;
+	top: 50%;
 	transform: translateY(-50%);
 }
 .purple-right-img {
 	background-image: url("./images/class.jpg");
-	width: 41vw;
-	height: 45vw;
+	width: 40vw;
+	height: 40vw;
 	position: absolute;
-	top: 50%;
 	right: 0;
+	top: 50%;
 	transform: translateY(-50%);
 }
 /* -------------------------------------------------------------- */
 .content-img-4 {
-	min-height: 40%;
+	height: 40%;
 	display: flex;
 	justify-content: center;
 	margin: 0 8vw 0 8vw;
 }
 .light-blue-img {
-	background-image: url("./images/talk.jpg");
+	background-image: url("./images/talk-lg.jpg");
 	width: 50vw;
 	height: 40vw;
 }
@@ -226,6 +225,7 @@ a {
 	font-weight: 700;
 	color: #0000ff;
 }
+
 /* ----------------------------Responsive---------------------------- */
 /* Large*/
 @media all and (min-width: 960px) {
@@ -290,5 +290,92 @@ a {
 	.body-text h1,
 	.body-text a {
 		font-size: 1.2rem;
+	}
+}
+/* Very Large */
+@media screen and (min-width: 1600px) {
+	.text-content {
+		width: 768px;
+	}
+	.content-img {
+		height: 928px;
+	}
+	.yellow-bg {
+		width: 928px;
+		height: 928px;
+	}
+	.left-img {
+		width: 672px;
+		height: 640px;
+		margin-left: 128px;
+		top: 144px;
+	}
+	.right-img {
+		width: 528px;
+		height: 400px;
+		margin-left: 112px;
+	}
+	.video-content {
+		width: 768px;
+		height: 480px;
+	}
+	.content-img-2 {
+		height: 1216px;
+	}
+	.green-bg {
+		width: 928px;
+		height: 1216px;
+	}
+	.green-top-img {
+		width: 528px;
+		height: 384px;
+		margin-left: 144px 0 144px 128px;
+		top: 140;
+	}
+	.green-bottom-img {
+		width: 528px;
+		height: 384px;
+		margin-left: 128px;
+	}
+	.green-right-img {
+		width: 656px;
+		height: 656px;
+		margin-right: 112px;
+		top: 272;
+	}
+	.device-img {
+		width: 1380px;
+		height: 736px;
+	}
+	.content-img-3 {
+		height: 928px;
+	}
+	.purple-bg {
+		width: 1056px;
+		height: 928px;
+		left: 791.500;
+	}
+	.purple-left-img {
+		width: 528px;
+		height: 352px;
+		margin-left: 128px;
+	}
+	.purple-right-img {
+		width: 656px;
+		height: 720px;
+
+		left: 927;
+	}
+	.content-img-4 {
+		height: 1177.500px;
+	}
+	.light-blue-img {
+		background-image: url("./images/talk.jpg");
+		width: 663.500px;
+		height: 640px;
+	}
+	.light-blue-bg {
+		width: 663.500px;
+		height: 640px;
 	}
 }
