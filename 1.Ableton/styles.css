@@ -1,6 +1,12 @@
 body {
 	margin: 0;
 	font-family: Arial, sans-serif;
+	background-color: #f3f3f3;
+}
+#wrapper {
+	max-width: 1600px;
+	margin: 0 auto;
+	background-color: #ffffff;
 }
 a {
 	text-decoration: none;
@@ -144,7 +150,81 @@ a {
 	height: 41vw;
 	position: absolute;
 	top: 17vw;
-	left: 50vw;
+	right: 0;
+	margin-right: 6vw;
+}
+/* -------------------------------------------------------------- */
+.device-img {
+	background-image: url("./images//device.jpg");
+	width: 80vw;
+	height: 40vw;
+	min-height: calc(100vh - 450px);
+	margin: 8rem auto;
+}
+/* -------------------------------------------------------------- */
+.content-img-3 {
+	position: relative;
+	min-height: 58vw;
+}
+.purple-bg {
+	background-color: #d5b3ff;
+	width: 66vw;
+	height: 58vw;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	opacity: 0.5;
+}
+.purple-left-img {
+	background-image: url("./images/library.jpg");
+	width: 33vw;
+	height: 22vw;
+	position: absolute;
+	top: 50%;
+	margin-left: 8vw;
+	transform: translateY(-50%);
+}
+.purple-right-img {
+	background-image: url("./images/class.jpg");
+	width: 41vw;
+	height: 45vw;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+/* -------------------------------------------------------------- */
+.content-img-4 {
+	min-height: 40%;
+	display: flex;
+	justify-content: center;
+	margin: 0 8vw 0 8vw;
+}
+.light-blue-img {
+	background-image: url("./images/talk.jpg");
+	width: 50vw;
+	height: 40vw;
+}
+.light-blue-bg {
+	background-color: #b1c5ff;
+	width: 50vw;
+	height: 40vw;
+	order: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.body-text {
+	padding: 7.5vw;
+	line-height: 1.5;
+}
+.body-text h1 {
+	font-size: 1.6rem;
+}
+.body-text a {
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: #0000ff;
 }
 /* ----------------------------Responsive---------------------------- */
 /* Large*/
@@ -196,5 +276,19 @@ a {
 	.text-content,
 	.video-content {
 		width: 100%;
+	}
+}
+/* flex  */
+@media all and (max-width: 1200px) {
+	.content-img-4 {
+		flex-direction: column;
+	}
+	.light-blue-bg,
+	.light-blue-img {
+		width: 100%;
+	}
+	.body-text h1,
+	.body-text a {
+		font-size: 1.2rem;
 	}
 }
