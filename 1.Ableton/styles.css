@@ -7,6 +7,14 @@ body {
 	max-width: 1600px;
 	margin: 0 auto;
 	background-color: #ffffff;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	padding-bottom: 10rem;
+}
+#main {
+	padding-bottom: 7vw;
+	border-bottom: 1px solid #efefef;
 }
 a {
 	text-decoration: none;
@@ -194,7 +202,7 @@ a {
 }
 /* -------------------------------------------------------------- */
 .content-img-4 {
-	height: 40%;
+	height: 40vw;
 	display: flex;
 	justify-content: center;
 	margin: 0 8vw 0 8vw;
@@ -225,7 +233,67 @@ a {
 	font-weight: 700;
 	color: #0000ff;
 }
-
+/* ------------------------------Footer------------------------------ */
+.footer-container {
+	margin: 0 8vw;
+	padding-top: 4vw;
+	font-size: 1rem;
+}
+.footer-container h1 {
+	font-size: 3rem;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 4rem;
+}
+.column {
+	flex-grow: 1;
+	flex-basis: 0;
+}
+.footer-container ul {
+	list-style-type: none;
+	padding-left: 0;
+	line-height: 1.5;
+	margin: 0;
+}
+.column h3 {
+	margin: 0 0 10px;
+}
+form {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+input[type="email"] {
+	flex-grow: 1;
+	border: 0;
+	background-color: #eee;
+	padding: 0.72rem 0.73rem;
+}
+input[type="submit"] {
+	background-color: #0000ff;
+	color: #fff;
+	border: 0;
+	padding: 0 1rem;
+	font-weight: bold;
+}
+select {
+	border: 0;
+	background-color: #eee;
+	padding: 0.52rem 3.73rem 0.52rem 0.73rem;
+}
+.last-footer-line a {
+	margin-right: 1rem;
+	font-size: .8rem;
+}
+.berlin {
+	font-size: .8rem;
+}
+.last-footer-line-right > * {
+	vertical-align: middle;
+}
 /* ----------------------------Responsive---------------------------- */
 /* Large*/
 @media all and (min-width: 960px) {
@@ -367,7 +435,10 @@ a {
 		left: 927;
 	}
 	.content-img-4 {
-		height: 1177.500px;
+		height: 640px;
+	}
+	.body-text {
+		padding: 120px;
 	}
 	.light-blue-img {
 		background-image: url("./images/talk.jpg");
@@ -377,5 +448,24 @@ a {
 	.light-blue-bg {
 		width: 663.500px;
 		height: 640px;
+	}
+	.footer-container {
+		margin: 0 128px;
+		padding-top: 64px;
+	}
+	.row {
+		margin-top: 64px;
+	}
+	input[type="email"] {
+		padding: 11.520px 11.680px;
+	}
+	input[type="submit"] {
+		padding: 0 16px;
+	}
+	select {
+		padding: 8.320px 59.680px 8.320px 11.680px;
+	}
+	.last-footer-line a {
+		margin-right: 16px;
 	}
 }
