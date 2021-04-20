@@ -10,7 +10,7 @@ body {
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
-	padding-bottom: 10rem;
+	padding-bottom: 2rem;
 }
 #main {
 	padding-bottom: 7vw;
@@ -39,10 +39,10 @@ a {
 	height: 1.5rem;
 }
 .element {
-	padding: 0 1.35rem;
+	padding: 0 0.7rem;
 }
 .element-right {
-	padding: 0 1rem;
+	padding: 0 0.5rem;
 }
 .right-nav :nth-child(1) {
 	color: #0000ff;
@@ -126,7 +126,6 @@ a {
 	background-image: url('./images/video.jpg');
 	width: 48vw;
 	height: 30vw;
-	min-height: calc(100vh - 450px);
 	margin: 8rem auto;
 }
 /* -------------------------------------------------------------- */
@@ -166,7 +165,6 @@ a {
 	background-image: url("./images//device.jpg");
 	width: 83vw;
 	height: 46vw;
-	min-height: calc(100vh - 450px);
 	margin: 8rem auto;
 }
 /* -------------------------------------------------------------- */
@@ -208,7 +206,7 @@ a {
 	margin: 0 8vw 0 8vw;
 }
 .light-blue-img {
-	background-image: url("./images/talk-lg.jpg");
+	background-image: url("./images/talk.jpg");
 	width: 50vw;
 	height: 40vw;
 }
@@ -236,7 +234,7 @@ a {
 /* ------------------------------Footer------------------------------ */
 .footer-container {
 	margin: 0 8vw;
-	padding-top: 4vw;
+	padding-top: 2vw;
 	font-size: 1rem;
 }
 .footer-container h1 {
@@ -255,12 +253,28 @@ a {
 .footer-container ul {
 	list-style-type: none;
 	padding-left: 0;
-	line-height: 1.5;
+	line-height: 1.7;
 	margin: 0;
 }
 .column h3 {
-	margin: 0 0 10px;
+	margin: 0 0 5px;
 }
+.social-button {
+	display: inline-block;
+	width: 2.5rem;
+	height: 2.5rem;
+	margin: 0 0.2rem;
+}
+.facebook {
+	background-color: #455a97;
+}
+.twitter {
+	background-color: #4aaae8;
+}
+.youtube {
+	background-color: #c81e25;
+}
+
 form {
 	display: flex;
 	flex-wrap: wrap;
@@ -291,8 +305,15 @@ select {
 .berlin {
 	font-size: .8rem;
 }
-.last-footer-line-right > * {
-	vertical-align: middle;
+.last-footer-line-right {
+	display: flex;
+	align-items: center;
+}
+.last-footer-line-right span {
+	padding: 1rem;
+}
+.footer-container i {
+	font-size: 10px;
 }
 /* ----------------------------Responsive---------------------------- */
 /* Large*/
@@ -344,6 +365,9 @@ select {
 	.text-content,
 	.video-content {
 		width: 100%;
+	}
+	.ableton-box h1 {
+		font-size: 4rem;
 	}
 }
 /* flex  */
@@ -441,7 +465,7 @@ select {
 		padding: 120px;
 	}
 	.light-blue-img {
-		background-image: url("./images/talk.jpg");
+		background-image: url("./images/talk-lg.jpg");
 		width: 663.500px;
 		height: 640px;
 	}
@@ -467,5 +491,64 @@ select {
 	}
 	.last-footer-line a {
 		margin-right: 16px;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.content {
+		margin: 2.5rem;
+	}
+	.text-content,
+	.video-content {
+		width: 70vw;
+	}
+	.video-content {
+		height: 45vw;
+	}
+	.text-content p {
+		font-size: 1rem;
+	}
+	.text-content h1 {
+		font-size: 1.1rem;
+	}
+	.body-text h1,
+	.body-text a {
+		font-size: 1rem;
+	}
+	.video-content,
+	.device-img {
+		margin: 3rem auto;
+	}
+	.content-img-4 {
+		height: 80vw;
+	}
+	.footer-container {
+		font-size: 0.85rem;
+	}
+	.row {
+		flex-direction: column;
+		justify-content: space-between;
+		margin-top: 0;
+	}
+	.column {
+		padding: 2vw 0;
+	}
+	.col-1 {
+		order: 2;
+	}
+	.col-2 {
+		order: 3;
+	}
+	.col-3 {
+		order: 1;
+	}
+	.last-footer-line a {
+		display: block;
+		line-height: 2;
+	}
+	.last-footer-line-right {
+		margin-top: 8vw;
+	}
+	.last-footer-line-right span {
+		order: 1;
 	}
 }
