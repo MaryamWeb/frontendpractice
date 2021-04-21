@@ -1,0 +1,196 @@
+body {
+	margin: 0;
+}
+#wrapper {
+	font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-weight: 600;
+}
+.navs {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	margin: 0 auto;
+}
+.main {
+	padding-top: 99px;
+}
+.topnav {
+	padding: 0 3em;
+	background-color: #ffffff;
+}
+.topnav div {
+	display: flex;
+	justify-content: space-between;
+}
+.topnavleft,
+.topnavright {
+	display: flex;
+}
+.topnavleft a,
+.topnavright a {
+	text-decoration: none;
+	color: #000000;
+}
+.logo {
+	display: flex;
+	align-items: center;
+	margin-right: 2em;
+}
+.block {
+	width: 51px;
+	height: 51px;
+}
+.topnavleft a:not(.logo) {
+	margin-right: 2.6em;
+	padding: 3.3em 0;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 0.8em;
+}
+.topnavright a {
+	margin-right: 2em;
+}
+.topnavright {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.topnavright > * {
+	margin-left: 1.2em;
+}
+.topnavright button {
+	padding: 0.7em 1.2em;
+	border-radius: 50px;
+}
+.topnavright button:nth-of-type(1) {
+	background-color: #ffffff;
+	border-color: #000000;
+}
+.topnavright button:nth-of-type(2) {
+	background-color: #000000;
+	color: white;
+	border-color: #000000;
+}
+.topnavright button:focus {
+	outline: none;
+}
+.bottomnav {
+	background-color: #1e3932;
+	box-shadow: 2px 2px 10px 0px rgb(2 2 2 / 32%);
+	color: white;
+	padding: 0 3em;
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+.bottomnav p {
+	margin: 0;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.heroImg {
+	background-image: url("./images/star-bg.png");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	margin-top: 0;
+	height: 54vw;
+	background-color: #1e3932;
+	display: flex;
+	align-items: center;
+	min-height: 626.594px;
+}
+.heroImg div {
+	padding: 0.9em 3em;
+	width: 45%;
+}
+.join-sm {
+	display: none;
+}
+.heroImg div p,
+.heroImg div h1 {
+	color: #ffffff;
+}
+.heroImg h1 {
+	font-size: 2.2em;
+}
+.heroImg p {
+	font-size: 1.1em;
+	line-height: 1.5;
+}
+.heroImg button {
+	background-color: #008248;
+	color: #ffffff;
+	border-radius: 50px;
+	border: none;
+	padding: 0.5em 1.3em;
+	font-weight: 600;
+	font-size: 1.1em;
+	margin-top: 1.4em;
+}
+.heroImg a {
+	color: #ffffff;
+}
+/* ----------------------------Responsive---------------------------- */
+@media screen and (min-width: 1600px) {
+	.topnav > div,
+	.bottomnav p {
+		width: 1485px;
+		margin: 0 auto;
+	}
+	.heroImg div {
+		padding: 0 48px;
+		width: 1485px;
+		margin: 0 auto;
+	}
+	.heroImg div > * {
+		width: 700px;
+	}
+	.heroImg {
+		max-height: 850px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.bottomnav {
+		padding: 0 16px;
+	}
+	.topnav {
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+	.heroImg {
+		background-image: url("./images/star-bg-phone.png");
+		background-position: 50%;
+		height: 135vw;
+		background-size: cover;
+		align-items: flex-start;
+	}
+	.heroImg div {
+		width: 100%;
+		max-width: 350px;
+		margin: 0 auto;
+		padding-top: 4.4em;
+	}
+	.heroImg div span:nth-of-type(1) {
+		display: none;
+	}
+	.join-sm {
+		display: block;
+		font-size: 0.9em;
+		text-align: center;
+	}
+	.join-sm button {
+		font-size: 0.9em;
+	}
+	.heroImg h1 {
+		font-size: 1.95em;
+	}
+	.heroImg p {
+		font-size: 1em;
+		text-align: center;
+	}
+}
