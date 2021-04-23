@@ -173,7 +173,8 @@ body {
 }
 .endless-extras-container div a,
 .get-started-col a,
-.earn-stars-col a {
+.earn-stars-col a,
+.star-codes-container a {
 	color: #008248;
 }
 .endless-extras-container div:nth-of-type(1) {
@@ -223,7 +224,127 @@ body {
 .earn-stars-row div p:nth-of-type(1) {
 	line-height: 1.6;
 }
-
+/* -------------------------- -------------------------- */
+.star-codes {
+	padding: 128px 0;
+}
+.star-codes-container {
+	width: 48%;
+	max-width: 729.213px;
+	margin: 0 auto;
+	color: #000000de;
+	font-weight: normal;
+}
+.star-codes-container div:nth-of-type(1) {
+	margin-bottom: 100px;
+}
+input[type="text"] {
+	border: none;
+	border-bottom: 1px solid rgb(31, 31, 32);
+	width: 100%;
+	margin-top: 40px;
+	margin-bottom: 30px;
+	color: #0000008f;
+	outline: none;
+	font-size: 1em;
+	padding-bottom: 10px;
+}
+.star-codes-container button {
+	position: relative;
+	float: right;
+	bottom: 4.9em;
+	right: 0;
+	border-radius: 50px;
+	padding: 0.5em 1.3em;
+	background-color: #ffffff;
+	font-weight: 600;
+	font-size: 1em;
+	outline: none;
+	border-color: #0000008f;
+	color: #000000de;
+}
+.star-codes-container p:nth-of-type(2) {
+	margin-bottom: 5px;
+}
+.star-codes-container p:nth-of-type(3) {
+	margin-top: 0;
+}
+/* -------------------------- -------------------------- */
+.informations {
+	background-color: #f7f7f7;
+}
+.informations-container {
+	padding: 4em 3em;
+}
+.informations-top,
+.informations-bottom {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 30px;
+}
+.informations h3 {
+	text-transform: uppercase;
+	color: #0000008f;
+	font-size: 1em;
+}
+.informations p {
+	font-weight: normal;
+	font-size: 0.9em;
+	line-height: 1.4;
+}
+.informations a {
+	color: #008248;
+}
+/* -------------------------- -------------------------- */
+.footer-container {
+	padding: 4em 3em;
+	font-weight: normal;
+}
+.footer-top {
+	display: flex;
+	justify-content: space-between;
+}
+.footer-top h2 {
+	font-size: 1.2em;
+	font-weight: normal;
+}
+footer ul {
+	list-style-type: none;
+	padding: 0;
+}
+.footer-top ul li {
+	padding: 0.7em 0;
+	color: #0000008f;
+}
+.footer-top-sm {
+	display: none;
+}
+.footer-social-links {
+	display: flex;
+	flex-direction: row;
+	border-top: 1px solid #3535353b;
+	padding: 2em 0 0.5em 0;
+}
+.footer-social-links li {
+	margin-right: 1em;
+}
+.footer-social-links a {
+	color: black;
+}
+.footer-bottom {
+	display: flex;
+}
+.footer-bottom li {
+	border-right: 1px solid black;
+	padding: 0 1em;
+}
+.footer-bottom li:nth-child(1) {
+	padding-left: 0;
+}
+.footer-container p {
+	font-size: 0.9em;
+	color: #0000008f;
+}
 /* ----------------------------Responsive---------------------------- */
 @media screen and (min-width: 1600px) {
 	.topnav > div,
@@ -251,6 +372,14 @@ body {
 		max-width: 1440px;
 		margin: 0 auto;
 	}
+	.informations-container {
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+	.footer-container {
+		max-width: 1440px;
+		margin: 0 auto;
+	}
 }
 @media screen and (max-width: 1024px) {
 	.endless-extras-container div:nth-of-type(1) {
@@ -271,6 +400,48 @@ body {
 	}
 	.line-lg {
 		border-bottom: none;
+	}
+	.informations p {
+		font-weight: normal;
+		font-size: 0.9em;
+		line-height: 1.5;
+	}
+	.footer-container {
+		padding: 4em 1em;
+	}
+	.footer-top {
+		flex-direction: column;
+	}
+	.footer-top-lg {
+		display: none;
+	}
+	.footer-top-sm {
+		display: flex;
+		cursor: pointer;
+		padding: 0.5em 0;
+	}
+	.footer-top ul {
+		display: none;
+	}
+	.footer-top ul.footer-row-content {
+		display: block;
+	}
+	.footer-top h2 {
+		font-size: 1em;
+	}
+	.footer-top-sm h2 {
+		flex: 1;
+	}
+	.footer-top-sm button {
+		background-color: #ffffff;
+		border: none;
+	}
+	.footer-bottom {
+		flex-direction: column;
+	}
+	.footer-bottom li {
+		border: none;
+		padding: 0.8em 0;
 	}
 }
 @media screen and (max-width: 767px) {
@@ -402,5 +573,25 @@ body {
 	}
 	.line-sm {
 		border-bottom: 1px solid rgba(0, 0, 0, .1);
+	}
+	.star-codes-container {
+		margin: 1em;
+		width: 90vw;
+	}
+	.informations-top,
+	.informations-bottom {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, 1fr);
+	}
+	.informations-container {
+		padding: 2em 1em;
+	}
+	.informations h3 {
+		font-size: 0.8em;
+	}
+	.informations p {
+		font-weight: normal;
+		font-size: 0.8em;
 	}
 }
