@@ -157,6 +157,73 @@ body {
 	grid-column-end: 4;
 }
 /* -------------------------- -------------------------- */
+.get-favorites {
+	background-color: #f1f8f6;
+	padding-top: 25px;
+}
+.get-favorites h1 {
+	text-align: center;
+	font-size: 1.7em;
+	margin-bottom: 2em;
+}
+.tab {
+	overflow: hidden;
+	border: none;
+	display: flex;
+	justify-content: center;
+}
+.tab-link {
+	background-color: #f1f8f6;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 0.8em 1em;
+	transition: 0.3s;
+	font-size: 1.5em;
+	font-weight: 700;
+	border-bottom: 4px solid transparent;
+}
+.star {
+	color: #cba258;
+	font-size: 0.7em;
+}
+.tab-link.active {
+	border-bottom: 4px solid #008248;
+}
+.tab-content {
+	display: none;
+	padding: 6px 12px;
+	background-color: #d4e9e2;
+	margin: 0 auto;
+	box-shadow: inset 0 7px 9px -7px rgb(0 0 0 / 14%);
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.tab-content-visibility {
+	margin: 0 auto;
+	width: 700px;
+	overflow: auto;
+}
+.tab-content img {
+	width: 375px;
+	height: 210px;
+	margin: 0;
+	float: left;
+}
+.tab-content div h3 {
+	padding-top: 2em;
+	font-size: 1.4em;
+}
+.tab-content div p {
+	font-weight: normal;
+}
+/* -------------------------- -------------------------- */
 .endless-extras {
 	padding: 128px 0;
 }
@@ -593,5 +660,39 @@ footer ul {
 	.informations p {
 		font-weight: normal;
 		font-size: 0.8em;
+	}
+	.get-favorites h1 {
+		font-size: 1.5em;
+		margin-bottom: 1em;
+	}
+	.tab {
+		justify-content: space-between;
+	}
+	.tab-link {
+		padding: 0.7em 1em;
+		font-size: 1.3em;
+	}
+	.tab-content {
+		padding: 6px 0;
+	}
+	.tab-content-visibility {
+		margin: 0 auto;
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		overflow: unset;
+	}
+	.tab-content div img {
+		width: 100%;
+		height: 100%;
+		padding: 0;
+	}
+	.tab-content div h3 {
+		margin: 0;
+		font-size: 1.2em;
+	}
+	.tab-content div p {
+		font-size: 0.9em;
 	}
 }
