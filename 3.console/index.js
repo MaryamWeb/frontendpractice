@@ -5,8 +5,8 @@ $(document).ready(function() {
 		$('.workflows-dropdown').toggleClass('hide');
 	});
 	$('.logo-bars').on('click', function() {
-		$('.navbar-container nav ul').slideToggle(300).addClass('show-ul');
-		console.log('df');
+		$('.navbar-container nav ul').toggleClass('show-ul');
+		$('.navbar-container nav ul').toggleClass('hide-sm');
 	});
 });
 let timer;
