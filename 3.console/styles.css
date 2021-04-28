@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	font-family: prompt, sans-serif;
 }
 #wrapper {
 	max-width: 1600px;
@@ -153,6 +154,7 @@ nav ul li i {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 30px auto;
+	padding-top: 20px;
 }
 .console-types-box {
 	width: 527.500px;
@@ -272,6 +274,100 @@ nav ul li i {
 .mt-img5:hover {
 	background-image: url("./images/module-hover5.jpg");
 }
+/* ---------------------------------------------------- */
+footer {
+	width: 100%;
+	font-size: 0.8em;
+	background-color: #1a2456;
+}
+.footer-container {
+	width: 1100px;
+	height: 276.172;
+	padding: 40px;
+	margin: 0 auto;
+}
+.footer-links-container {
+	display: flex;
+	justify-content: space-between;
+}
+.footer-links-box ul {
+	list-style: none;
+	padding-left: 0;
+}
+.footer-links-box li {
+	color: #efc2b3;
+	line-height: 1.6;
+}
+.footer-links-box h4,
+.footer-subscribe-box h4 {
+	color: #efc2b3;
+	text-transform: uppercase;
+	font-size: 0.9em;
+}
+.footer-links-box a {
+	color: #efc2b3;
+	text-decoration: none;
+}
+.footer-links-box a:hover {
+	color: #ff8b68;
+	text-decoration: underline;
+}
+.footer-subscribe-box p,
+.privacy-copyright-sm {
+	color: #efc2b3;
+}
+.footer-subscribe-box {
+	flex: 0 0 30%;
+}
+input[type="text"] {
+	padding: 0.3rem;
+	background-color: transparent;
+	border: 1px solid #efc2b3;
+	color: rgb(219, 216, 216);
+	outline: none;
+}
+.footer-subscribe-box button {
+	padding: 0.3rem 1rem;
+	margin-left: 0.5rem;
+	background-color: #a48a92;
+	color: #363b41;
+	font-weight: 600;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 50rem;
+}
+.footer-links {
+	list-style: none;
+	display: flex;
+	padding: 0;
+	margin-top: 40px;
+	text-align: center;
+}
+.footer-links li {
+	width: 15px;
+	height: 15px;
+	padding: .4em;
+	margin-right: 0.5rem;
+	background-color: #efc2b3;
+	color: transparent;
+	border-radius: 50rem;
+}
+.footer-links svg {
+	width: 15px;
+	height: 15px;
+}
+.small-text {
+	font-size: 0.7rem;
+	line-height: 3;
+	display: block;
+}
+.small-text a {
+	text-decoration: none;
+	color: #ff8b68;
+}
+.privacy-copyright-sm {
+	display: none;
+}
 /* ----------------------------Responsive---------------------------- */
 @media screen and (min-width: 1600px) {
 	.console-types-container {
@@ -282,6 +378,7 @@ nav ul li i {
 	.console-types-container {
 		width: 920px;
 		height: 793.672px;
+		margin: 0 auto;
 	}
 	.console-types-box {
 		width: 437.500px;
@@ -308,6 +405,18 @@ nav ul li i {
 	.module-types-img {
 		height: 437.500px;
 		width: 437.500px;
+	}
+	.footer-container {
+		width: 90vw;
+		padding: 40px 10px;
+	}
+}
+@media screen and (max-width: 1000px) {
+	input[type="text"] {
+		width: 155px;
+	}
+	.footer-subscribe-box button {
+		margin-left: 0.3rem;
 	}
 }
 @media screen and (max-width: 990px) {
@@ -365,6 +474,31 @@ nav ul li i {
 		height: 332.500px;
 		width: 332.500px;
 	}
+	.footer-links-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 2;
+	}
+	.footer-links-container div:nth-of-type(1) {
+		order: 1;
+	}
+	.footer-links-container div:nth-of-type(5) {
+		order: 2;
+		grid-column-start: 2;
+		grid-column-end: 4;
+	}
+	.footer-links-container div:nth-of-type(2) {
+		order: 3;
+	}
+	.footer-links-container div:nth-of-type(3) {
+		order: 4;
+	}
+	.footer-links-container div:nth-of-type(4) {
+		order: 5;
+	}
+	input[type="text"] {
+		width: 60%;
+	}
 }
 @media screen and (max-width: 767px) {
 	.slideshow-container {
@@ -372,20 +506,20 @@ nav ul li i {
 	}
 	.console-types-container {
 		width: 90.65vw;
-		height: 198.521vh;
+		height: 1388.030px;
 	}
 	.console-types-box {
 		width: inherit;
-		height: 67.034vh;
+		height: 258.344px;
 	}
 	.console-types-img,
 	.ct-img3 {
-		height: 52.965vh;
+		height: 388.344px;
 	}
 	.module-types-container {
 		width: 88vw;
+		height: 1964.220px;
 		grid-template-columns: repeat(1, 1fr);
-		border: 1px solid rebeccapurple;
 	}
 	.module-types-box {
 		width: 88vw;
@@ -402,5 +536,22 @@ nav ul li i {
 	.next-arrow:hover,
 	.prev-arrow:hover {
 		background-color: transparent;
+	}
+	.footer-links-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.footer-links-container div:nth-of-type(1) {
+		order: 2;
+	}
+	.footer-links-container div:nth-of-type(5) {
+		order: 1;
+		grid-column: span 2;
+	}
+	.privacy-copyright-sm {
+		display: block;
+		order: 6;
+	}
+	.privacy-copyright-lg {
+		display: none;
 	}
 }
