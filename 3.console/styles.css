@@ -5,6 +5,7 @@ body {
 #wrapper {
 	max-width: 1600px;
 	margin: 0 auto;
+	background-color: #ffffff;
 }
 /* ---------------------------------------------------- */
 header {
@@ -16,7 +17,7 @@ header {
 	position: absolute;
 	top: 0;
 	position: fixed;
-	z-index: 100;
+	/* z-index: 100; */
 }
 nav {
 	display: flex;
@@ -145,6 +146,89 @@ nav ul li i {
 .prev-arrow:hover {
 	background-color: #ffffffbf;
 	opacity: 1;
+}
+/* ---------------------------------------------------- */
+.side-page-content {
+	height: 100vh;
+	width: 0px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 2000;
+	background-color: #ffffff;
+	transition: width 0.7s ease-in-out;
+}
+.side-page-content.show-side {
+	width: 370px;
+}
+.body-overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.514);
+}
+.side-page-content > * {
+	padding: 20px;
+	width: 330px;
+}
+.side-page-content h3:first-child {
+	margin: 0;
+	background-color: #1a2456;
+	color: #ffffff;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+.side-page-content-mid p:first-child {
+	text-align: center;
+}
+.side-page-content-mid-editing-box {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	margin-top: 3em;
+}
+.side-page-content-mid-editing-box img {
+	width: 6em;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+.side-page-content-mid-editing-box h4 {
+	margin: 0 0 0.7em 0;
+	text-transform: uppercase;
+	color: #1a2456;
+}
+.side-page-content-mid-editing-box p {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	font-size: 0.7em;
+}
+.side-page-content-footer {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	background-color: #1a2456;
+}
+.side-page-content-footer p {
+	color: #ffffff;
+	text-transform: uppercase;
+}
+.side-page-content-footer span {
+	float: right;
+}
+.side-page-content-footer button {
+	padding: 0.5rem 1rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 50rem;
+	background-color: #a48a92;
+	color: #363b41;
 }
 /* ---------------------------------------------------- */
 .console-types-container {

@@ -8,6 +8,21 @@ $(document).ready(function() {
 		$('.navbar-container nav ul').toggleClass('show-ul');
 		$('.navbar-container nav ul').toggleClass('hide-sm');
 	});
+	$('.logo-bag').on('click', function(e) {
+		e.stopPropagation();
+		$('.side-page-content').addClass('show-side');
+		$('.overlay').addClass('body-overlay');
+	});
+	$('.side-page-content h3').on('click', function() {
+		$('.side-page-content').removeClass('show-side');
+		$('.overlay').removeClass('body-overlay');
+	});
+	$(document).on('click', 'body', function(e) {
+		if (!$(e.target).closest('.side-page-content').length) {
+			$('.side-page-content').removeClass('show-side');
+			$('.overlay').removeClass('body-overlay');
+		}
+	});
 });
 let timer;
 let slideIndex = 1;
