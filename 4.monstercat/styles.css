@@ -1,0 +1,83 @@
+body {
+	font-family: "gotham", Open Sans, sans-serif;
+	margin: 0;
+}
+:root {
+	--light-grey-color: #eee;
+}
+nav {
+	width: 80%;
+	margin: 0 auto;
+	padding: 0.4em 1.5em;
+	background-color: #ffffff;
+}
+.nav-top {
+	display: inline-grid;
+	grid-template-columns: 6fr repeat(9, 1fr);
+	list-style: none;
+}
+.nav-top li {
+	padding: 0 0.3em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.nav-top a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: 700;
+}
+.logo {
+	background-image: url("./images/monstercat-logo.svg");
+	width: 185px;
+	height: 41px;
+}
+.symbol {
+	background-image: url('./images//monstercat-symbol.png');
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+}
+.nav-bottom {
+	display: flex;
+	justify-content: space-between;
+}
+.nav-bottom ul {
+	list-style: none;
+}
+.nav-bottom ul li {
+	display: inline-block;
+	padding: 0 0.8em;
+}
+.nav-bottom ul li:not(:last-child) {
+	border-right: 1px solid grey;
+}
+.nav-bottom a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000000;
+}
+.nav-bottom ul li i {
+	padding-right: 0.8em;
+}
+.nav-bottom input[type="text"] {
+	border: none;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	color: var(--light-grey-color);
+}
+.nav-bottom div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.nav-button-container button {
+	padding: 0 0.6em;
+	background-color: transparent;
+	color: #383838;
+	border: none;
+}
+.nav-button-container button i {
+	font-size: 1rem;
+}
