@@ -1,0 +1,166 @@
+@font-family: Tahoma;
+@color-light: #ffffff;
+@color-dark: #000000;
+@background-color-yellow: #fff804;
+@background-color-green: #81836c;
+@background-color-pink: #e280ff;
+@border-radius: 50px;
+
+body {
+	font-family: @font-family;
+	margin: 0;
+}
+body > * {
+	padding: 0 2em;
+}
+a {
+	text-decoration: none;
+}
+
+nav {
+	.flex-parent(row,space-between,center);
+	height: 100px;
+	text-transform: uppercase;
+	img {
+		width: 39px;
+		height: 100px;
+	}
+	ul {
+		margin: 0;
+		list-style: none;
+		li {
+			display: inline;
+		}
+		li:not(:last-child) {
+			margin-right: 40px;
+		}
+	}
+	div a:nth-of-type(1) {
+		padding-right: 20px;
+		color: @color-dark;
+	}
+	div a:nth-of-type(2) {
+		padding: 15px 50px;
+		border-radius: @border-radius;
+		background-color: @color-dark;
+		color: @color-light;
+	}
+}
+
+.first-container {
+	padding-top: 100px;
+	.flex-parent(row,flex-start,center);
+	.first-container-left {
+		flex: 1 1 50%;
+		position: relative;
+		div {
+			width: 80%;
+			button {
+				padding: 5px;
+				font-size: 17px;
+				border: 3px solid black;
+				text-transform: uppercase;
+				color: @color-dark;
+				background-color: @color-light;
+			}
+			h1 {
+				font-size: 60px;
+			}
+			p {
+				font-size: 27px;
+				i {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	.first-container-right {
+		width: 50%;
+		height: 50vw;
+		div {
+			.img-background-cover('../images/holding-records.png');
+			.bordered(black);
+			width: 100%;
+			height: 70vw;
+			transform: rotate(6deg);
+		}
+	}
+}
+.second-container {
+	.flex-parent(row,flex-start,center);
+	border-bottom: 2px solid @color-dark;
+	.second-container-left {
+		width: 50%;
+		height: 70vw;
+		position: relative;
+		div {
+			.img-background-cover('../images/holding-waves-record.png');
+			.bordered(black);
+			width: 100%;
+			height: 70vw;
+			transform: rotate(-4deg);
+			position: absolute;
+			left: 120px;
+		}
+	}
+	.second-container-right {
+		width: 50%;
+		height: 20vw;
+		div {
+			width: 18vw;
+			height: 20vw;
+			margin: 0 auto;
+			.img-background-cover('../images/paid_to_artists.png');
+		}
+	}
+}
+.bordered(@color) {
+	border: 1px solid @color;
+}
+.flex-parent(@direction,@justify-content,@align-items) {
+	display: flex;
+	flex-direction: @direction;
+	justify-content: @justify-content;
+	align-items: @align-items;
+}
+.img-background-cover(@url) {
+	background-image: url(@url);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+// @font-family: Tahoma;
+// @primary-color: rgb(85, 67, 119);
+// @secondary-color: rgb(100, 128, 0);
+
+// body {
+// 	background: @background-color;
+// 	font-family: @font-family;
+// }
+
+// .primary-text {
+// 	color: @primary-color;
+// }
+// h1 {
+// 	.bordered;
+// }
+// .btn {
+// 	padding: 3em;
+// 	border: 1px solid red;
+// }
+// .primary-btn:extend(.btn) {
+// 	background-color: @primary-color;
+// }
+// .bordered {
+// 	border-top: dotted 1px black;
+// 	border-bottom: solid 2px black;
+// }
+// ul.g {
+// 	list-style: none;
+// 	li {
+// 		color: orange;
+// 		&:hover {
+// 			color: green;
+// 		}
+// 	}
+// }

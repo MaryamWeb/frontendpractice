@@ -1,0 +1,124 @@
+body {
+  font-family: Tahoma;
+  margin: 0;
+}
+body > * {
+  padding: 0 2em;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  text-transform: uppercase;
+}
+nav img {
+  width: 39px;
+  height: 100px;
+}
+nav ul {
+  margin: 0;
+  list-style: none;
+}
+nav ul li {
+  display: inline;
+}
+nav ul li:not(:last-child) {
+  margin-right: 40px;
+}
+nav div a:nth-of-type(1) {
+  padding-right: 20px;
+  color: #000000;
+}
+nav div a:nth-of-type(2) {
+  padding: 15px 50px;
+  border-radius: 50px;
+  background-color: #000000;
+  color: #ffffff;
+}
+.first-container {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.first-container .first-container-left {
+  flex: 1 1 50%;
+  position: relative;
+}
+.first-container .first-container-left div {
+  width: 80%;
+}
+.first-container .first-container-left div button {
+  padding: 5px;
+  font-size: 17px;
+  border: 3px solid black;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #ffffff;
+}
+.first-container .first-container-left div h1 {
+  font-size: 60px;
+}
+.first-container .first-container-left div p {
+  font-size: 27px;
+}
+.first-container .first-container-left div p i {
+  font-size: 16px;
+}
+.first-container .first-container-right {
+  width: 50%;
+  height: 50vw;
+}
+.first-container .first-container-right div {
+  background-image: url('../images/holding-records.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  border: 1px solid black;
+  width: 100%;
+  height: 70vw;
+  transform: rotate(6deg);
+}
+.second-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 2px solid #000000;
+}
+.second-container .second-container-left {
+  width: 50%;
+  height: 70vw;
+  position: relative;
+}
+.second-container .second-container-left div {
+  background-image: url('../images/holding-waves-record.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  border: 1px solid black;
+  width: 100%;
+  height: 70vw;
+  transform: rotate(-4deg);
+  position: absolute;
+  left: 120px;
+}
+.second-container .second-container-right {
+  width: 50%;
+  height: 20vw;
+}
+.second-container .second-container-right div {
+  width: 18vw;
+  height: 20vw;
+  margin: 0 auto;
+  background-image: url('../images/paid_to_artists.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
