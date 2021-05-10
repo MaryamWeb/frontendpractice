@@ -1,9 +1,8 @@
 $(document).ready(function() {
-	$('.nav-top-sm button').on('click', function() {
-		$('.nav-bottom-sm')[0].style.display = 'block';
-	});
+	setInterval(stickerOpacity, 2000);
 	$('.toggle-button').on('click', function() {
 		$('.nav-toggled-menue').toggleClass('nav-sm-content-show');
+		$('.overlay-off').toggleClass('overlay');
 	});
 
 	let content = document.getElementsByClassName('accordion');
@@ -17,16 +16,27 @@ $(document).ready(function() {
 	}
 });
 const clickHandler = (evt, option) => {
-	let tabContent, tabLinks, contentAnimation;
+	let tabContent, tabLinks;
 
 	tabContent = document.getElementsByClassName('tab-content');
 	for (let tab of tabContent) tab.style.display = 'none';
 
 	tabLinks = document.getElementsByClassName('tab-link');
-	for (let tab of tabLinks) tab.className = tab.className.replace('active', '');
+	for (let tab of tabLinks) tab.className = tab.className.replace(' active', '');
 
-	document.getElementById(option).style.display = 'flex';
+	document.getElementById(option).style.display = 'block';
 	evt.currentTarget.className += ' active';
+
+	let setImg = document.getElementsByClassName('artists-on-qrates-right-img')[0];
+	let setBgColor = document.getElementsByClassName('artists-on-qrates-container')[0];
+
+	if (option == 'slide-1') {
+		setImg.style.backgroundImage = "url('./images/artist.jpg')";
+		setBgColor.style.backgroundColor = '#fff804';
+	} else {
+		setImg.style.backgroundImage = "url('./images/artist2.jpg')";
+		setBgColor.style.backgroundColor = '#ff6711';
+	}
 };
 
 let timer;
@@ -44,7 +54,6 @@ const img = document.getElementsByClassName('make-it-real-img');
 let i = 0;
 
 const automaticSlideshow = () => {
-	console.log($('.make-it-real-img'));
 	img[0].style.backgroundImage = images[i];
 	i == 5 ? (i = 0) : i++;
 };
@@ -59,4 +68,11 @@ window.onload = function() {
 		}
 		automaticSlideshow();
 	}, 1000);
+};
+
+let spark = document.getElementsByClassName('sparkle-sticker');
+let money = document.getElementsByClassName('money-sticker');
+const stickerOpacity = () => {
+	spark[0].style.opacity == '0' ? (spark[0].style.opacity = '1') : (spark[0].style.opacity = '0');
+	money[0].style.opacity == '1' ? (money[0].style.opacity = '0') : (money[0].style.opacity = '1');
 };

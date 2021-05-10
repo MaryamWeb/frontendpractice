@@ -17,7 +17,7 @@
             <li>discover</li>
             <li>search</li>
             <li>why qrates</li>
-            <li>cart</li>
+            <li>cart</li> 
         </ul>
         <div>
             <a href="#">log in</a>
@@ -44,28 +44,33 @@
             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
         </ul>
-        <img src="./images/peace.png" alt="">
-        <a href="#" class="login-button">log in</a>
-        <a href="#" class="make-record-button">make a record</a>
+        <div class="buttons">
+            <img src="./images/peace.png" alt="">
+            <a href="#" class="login-button">log in</a>
+            <a href="#" class="make-record-button">make a record</a>
+        </div>
     </div>
-    <section class="first-container">
-        <div class="first-container-left">
-            <div>
-                <a href="#">why qrates</a>
-                <h1>Your music on vinyl.<br>Without the barriers.</h1>
-                <p>Full-service pressing, a global retail network, customer support — and you keep up to 85% of profits. <i class="fa fa-arrow-down"></i></p>
+    <a class="overlay-off"></a>
+    <section class="why-qrates-container">
+        <div class="first-container">
+            <div class="first-container-left">
+                <div>
+                    <a href="#">why qrates</a>
+                    <h1 class="j">Your music on vinyl.<br><span>Without the barriers.</span></h1>
+                    <p>Full-service pressing, a global retail network, customer support — and you keep up to 85% of profits. <i class="fa fa-arrow-down"></i></p>
+                </div>
+            </div>
+            <div class="first-container-right">
+                <img src="./images/holding-records.png" alt="">
             </div>
         </div>
-        <div class="first-container-right">
-            <img src="./images/holding-records.png" alt="">
-        </div>
-    </section>
-    <section class="second-container">
-        <div class="second-container-left">
-            <img src="./images//holding-waves-record.png" alt="">
-        </div>
-        <div class="second-container-right">
-            <div></div>
+        <div class="second-container">
+            <div class="second-container-left">
+                <img src="./images//holding-waves-record.png" alt="">
+            </div>
+            <div class="second-container-right">
+                <div></div>
+            </div>
         </div>
     </section>
     <section class="midpage-text-container-lg">
@@ -209,7 +214,9 @@
         <div><img src="./images/with-disk3.jpg" alt=""></div>
         <div><img src="./images/with-disk4.jpg" alt=""></div>
         <div><img src="./images/with-disk5.jpg" alt=""></div>
+        <img class="eyes-sticker" src="./images/eyes.png" alt="">
     </section>
+
     <section class="moving-list-container">
         <ul class="moving-list">
             <li><a href="#">chilled cow</a> is on qrates</li>
@@ -222,36 +229,24 @@
             <li><a href="#">chillhop</a> is on qrates</li>
         </ul>
     </section>
-    <section id="slide-1" class="artists-on-qrates-container tab-content">
+    <section class="artists-on-qrates-container">
         <div class="artists-on-qrates-left">
             <a href="#">artists on qrates</a>
-            <div>
+            <div id="slide-1"  class="tab-content">
                 <p>"The response was overwhelming. It made me wonder why I hadn't pressed any records on vinyl before now. It felt like something that people had been waiting for for a long time."</p>
                 <p>—SOL</p>
+            </div>
+            <div id="slide-2" class="tab-content">
+                <p>"We hit our goal of 100 Records in the first 32 minutes. And I have to be honest, I didn't expect that. There's no world where I would have thought that we were about to sell north of 2800 copies."</p>
+                <p>—Mason Lieberman <a href="#">(The Real Folk Blues, 2020)</a></p>
             </div>
             <div class="tab">
                 <button class="tab-link active" onclick="clickHandler(event, 'slide-1')">1</button>
                 <button class="tab-link" onclick="clickHandler(event, 'slide-2')">2</button>
             </div>
         </div>
-        <div class="artists-on-qrates-right">
-            <div class="third-container-img"></div>
-        </div>
-    </section>
-    <section id="slide-2" class="artists-on-qrates-container tab-content">
-        <div class="artists-on-qrates-left  ">
-            <a href="#">artists on qrates</a>
-            <div>
-                <p>"We hit our goal of 100 Records in the first 32 minutes. And I have to be honest, I didn't expect that. There's no world where I would have thought that we were about to sell north of 2800 copies."</p>
-                <p>—Mason Lieberman <a href="#">(The Real Folk Blues, 2020)</a></p>
-            </div>
-            <div class="tab">
-                <button class="tab-link" onclick="clickHandler(event, 'slide-1')">1</button>
-                <button class="tab-link" onclick="clickHandler(event, 'slide-2')">2</button>
-            </div>
-        </div>
-        <div class="artists-on-qrates-right">
-            <div class="third-container-img"></div>
+        <div class="artists-on-qrates-right" >
+            <div class="artists-on-qrates-right-img"></div>
         </div>
     </section>
     <section id="slider" class="make-it-real-container"> 
@@ -259,7 +254,7 @@
             <a href="#">vinyl studio</a>
             <h1>Make it real with<br>Qrates Vinyl Studio</h1>
             <p>Design the look and feel of your vinyl and use the profit calculator to immediately see how much your project will cost, and how much you’ll earn.</p>
-            <div class="make-it-real-img-container"><div class="make-it-real-img"></div></div>
+            <div class="make-it-real-img-container"><div class="make-it-real-img"><img class="sparkle-sticker" src="./images/sparkle.png" alt=""> <img class="money-sticker" src="./images/dollar.png" alt=""></div></div>
             <a href="#">try it now</a>
         </div>
     </section>
