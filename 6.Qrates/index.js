@@ -3,6 +3,7 @@ $(document).ready(function() {
 	$('.toggle-button').on('click', function() {
 		$('.nav-toggled-menue').toggleClass('nav-sm-content-show');
 		$('.overlay-off').toggleClass('overlay');
+		$('body').toggleClass('body-fixed');
 	});
 
 	let content = document.getElementsByClassName('accordion');
