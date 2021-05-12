@@ -1,36 +1,39 @@
 body {
   padding: 0;
   margin: 0;
-  overflow: hidden;
   font-weight: bold;
   font-family: sans-serif;
+  min-height: 100vh;
+}
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
 }
-.header-logo {
-  background-color: transparent;
-  width: 250px;
-  position: absolute;
+header {
+  position: fixed;
   left: 1em;
-  top: 0;
   padding-top: 23px;
 }
-.header-email {
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  right: 4em;
-  margin: 0;
-  padding-top: 23px;
+header .header-logo {
+  width: 250px;
 }
-.header-email a {
-  color: black;
+@media screen and (max-width: 990px) {
+  header {
+    display: none;
+  }
 }
 .container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.container::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
 }
 .container section {
   height: 100vh;
@@ -56,6 +59,67 @@ a {
 }
 .container section a:hover {
   text-decoration: underline;
+}
+@media screen and (max-width: 990px) {
+  footer {
+    margin-top: auto;
+  }
+}
+footer .footer-email {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  right: 2em;
+  margin: 0;
+  padding-top: 23px;
+}
+footer .footer-email a {
+  color: black;
+}
+footer .footer-navigation-links {
+  background-color: transparent;
+  position: fixed;
+  bottom: 0;
+  right: 2em;
+  margin: 0;
+  padding-bottom: 23px;
+  list-style: none;
+}
+footer .footer-navigation-links li a {
+  color: black;
+  line-height: 1.6;
+}
+footer .foooter-div-container {
+  background-color: transparent;
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  left: 2em;
+  padding-bottom: 23px;
+  width: 20%;
+}
+@media screen and (max-width: 990px) {
+  footer .foooter-div-container {
+    position: static;
+    top: 0;
+  }
+}
+footer .foooter-div-container p {
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+footer .foooter-div-container span {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: lighter;
+}
+footer .foooter-div-container a {
+  color: black;
+  text-decoration: underline;
+}
+footer .foooter-div-container > a {
+  display: block;
+  margin-top: 20px;
 }
 section:nth-of-type(1) {
   background-color: #00c1b5;
