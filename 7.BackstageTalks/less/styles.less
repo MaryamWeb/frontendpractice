@@ -16,11 +16,14 @@ header {
 	position: fixed;
 	left: 1em;
 	padding-top: 23px;
+	@media screen and (max-width: 990px) {
+		position: absolute;
+		.header-logo {
+			width: 150px;
+		}
+	}
 	.header-logo {
 		width: 250px;
-	}
-	@media screen and (max-width: 990px) {
-		display: none;
 	}
 }
 .container {
@@ -32,12 +35,11 @@ header {
 }
 .container {
 	section {
-		height: 100vh;
-		scroll-snap-align: start;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		.flex-parent();
+		min-height: 100vh;
+		@media screen and (min-width: 990px) {
+			scroll-snap-align: start;
+		}
 		img {
 			width: 400px;
 			height: 500px;
@@ -58,8 +60,10 @@ header {
 	}
 }
 footer {
+	background-color: #e30512;
 	@media screen and (max-width: 990px) {
-		margin-top: auto;
+		.flex-parent( @flex-wrap:wrap);
+		text-align: center;
 	}
 	.footer-email {
 		background-color: transparent;
@@ -68,11 +72,16 @@ footer {
 		right: 2em;
 		margin: 0;
 		padding-top: 23px;
+		@media screen and (max-width: 990px) {
+			position: static;
+			top: 0;
+			order: 2;
+		}
 		a {
 			color: black;
 		}
 	}
-	.footer-navigation-links {
+	.footer-navigation-links-lg {
 		background-color: transparent;
 		position: fixed;
 		bottom: 0;
@@ -80,6 +89,12 @@ footer {
 		margin: 0;
 		padding-bottom: 23px;
 		list-style: none;
+		@media screen and (max-width: 990px) {
+			position: static;
+			top: 0;
+			order: 3;
+			display: none;
+		}
 		li {
 			a {
 				color: black;
@@ -87,18 +102,37 @@ footer {
 			}
 		}
 	}
+	.footer-navigation-links-sm {
+		display: none;
+		order: 3;
+		padding-top: 50px;
+		@media screen and (max-width: 990px) {
+			.flex-parent();
+		}
+		button {
+			width: 120px;
+			padding: 0.5em;
+			margin: 0.8em 0;
+			color: #1d3fbb;
+			background-color: #999;
+			border: none;
+			border-radius: 3px;
+		}
+	}
 	.foooter-div-container {
 		background-color: transparent;
 		position: fixed;
+		bottom: 0;
+		left: 2em;
+		margin: 0;
+		padding-bottom: 23px;
+		width: 25%;
 		@media screen and (max-width: 990px) {
 			position: static;
 			top: 0;
+			width: 90%;
+			order: 1;
 		}
-		bottom: 0;
-		margin: 0;
-		left: 2em;
-		padding-bottom: 23px;
-		width: 20%;
 		p {
 			line-height: 1.4;
 			margin-bottom: 0;
@@ -132,4 +166,11 @@ section:nth-of-type(4) {
 }
 section:nth-of-type(5) {
 	background-color: #e30512;
+}
+.flex-parent(@direction:column,@justify-content:center,@align-items:center,@flex-wrap:nowrap) {
+	display: flex;
+	flex-direction: @direction;
+	justify-content: @justify-content;
+	align-items: @align-items;
+	flex-wrap: @flex-wrap;
 }

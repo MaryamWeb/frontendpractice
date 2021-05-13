@@ -17,13 +17,16 @@ header {
   left: 1em;
   padding-top: 23px;
 }
-header .header-logo {
-  width: 250px;
-}
 @media screen and (max-width: 990px) {
   header {
-    display: none;
+    position: absolute;
   }
+  header .header-logo {
+    width: 150px;
+  }
+}
+header .header-logo {
+  width: 250px;
 }
 .container {
   -ms-overflow-style: none;
@@ -36,12 +39,17 @@ header .header-logo {
   /* Safari and Chrome */
 }
 .container section {
-  height: 100vh;
-  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
+  min-height: 100vh;
+}
+@media screen and (min-width: 990px) {
+  .container section {
+    scroll-snap-align: start;
+  }
 }
 .container section img {
   width: 400px;
@@ -60,9 +68,17 @@ header .header-logo {
 .container section a:hover {
   text-decoration: underline;
 }
+footer {
+  background-color: #e30512;
+}
 @media screen and (max-width: 990px) {
   footer {
-    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
   }
 }
 footer .footer-email {
@@ -73,10 +89,17 @@ footer .footer-email {
   margin: 0;
   padding-top: 23px;
 }
+@media screen and (max-width: 990px) {
+  footer .footer-email {
+    position: static;
+    top: 0;
+    order: 2;
+  }
+}
 footer .footer-email a {
   color: black;
 }
-footer .footer-navigation-links {
+footer .footer-navigation-links-lg {
   background-color: transparent;
   position: fixed;
   bottom: 0;
@@ -85,23 +108,56 @@ footer .footer-navigation-links {
   padding-bottom: 23px;
   list-style: none;
 }
-footer .footer-navigation-links li a {
+@media screen and (max-width: 990px) {
+  footer .footer-navigation-links-lg {
+    position: static;
+    top: 0;
+    order: 3;
+    display: none;
+  }
+}
+footer .footer-navigation-links-lg li a {
   color: black;
   line-height: 1.6;
+}
+footer .footer-navigation-links-sm {
+  display: none;
+  order: 3;
+  padding-top: 50px;
+}
+@media screen and (max-width: 990px) {
+  footer .footer-navigation-links-sm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+footer .footer-navigation-links-sm button {
+  width: 120px;
+  padding: 0.5em;
+  margin: 0.8em 0;
+  color: #1d3fbb;
+  background-color: #999;
+  border: none;
+  border-radius: 3px;
 }
 footer .foooter-div-container {
   background-color: transparent;
   position: fixed;
   bottom: 0;
-  margin: 0;
   left: 2em;
+  margin: 0;
   padding-bottom: 23px;
-  width: 20%;
+  width: 25%;
 }
 @media screen and (max-width: 990px) {
   footer .foooter-div-container {
     position: static;
     top: 0;
+    width: 90%;
+    order: 1;
   }
 }
 footer .foooter-div-container p {
