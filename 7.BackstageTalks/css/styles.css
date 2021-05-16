@@ -4,6 +4,8 @@ body {
   font-weight: bold;
   font-family: sans-serif;
   min-height: 100vh;
+  background-color: #00c1b5;
+  transition: background-color 500ms linear;
 }
 html {
   scroll-snap-type: y mandatory;
@@ -177,18 +179,18 @@ footer .foooter-div-container > a {
   display: block;
   margin-top: 20px;
 }
-section:nth-of-type(1) {
+.issue5-bg {
   background-color: #00c1b5;
 }
-section:nth-of-type(2) {
+.issue4-bg {
   background-color: #ff651a;
 }
-section:nth-of-type(3) {
+.issue3-bg {
   background-color: #ffbe00;
 }
-section:nth-of-type(4) {
+.issue2-bg {
   background-color: #1d3fbb;
 }
-section:nth-of-type(5) {
+.issue1-bg {
   background-color: #e30512;
 }
