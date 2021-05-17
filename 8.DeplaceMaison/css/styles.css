@@ -1,0 +1,107 @@
+body {
+  background-color: #fcf9ee;
+  font-family: Favorit, sans-serif;
+  text-transform: uppercase;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+}
+.spring-summer {
+  width: 80%;
+  padding: 8vw 8vw 0 0;
+  text-align: right;
+}
+.spring-summer h1 {
+  margin: 0;
+  font-size: calc(1rem + 12vw);
+  line-height: calc(0.8em + 10px);
+  letter-spacing: -0.1em;
+}
+.spring-summer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.spring-summer div h3 {
+  font-size: calc(1rem + 4vw);
+  font-weight: lighter;
+  font-style: italic;
+  padding-left: 1vw;
+  margin-bottom: 10px;
+  line-height: 0.8em;
+  font-family: 'Caveat Brush', cursive;
+}
+.spring-summer div h3 span {
+  display: block;
+  text-align: center;
+}
+.explore-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  width: 80%;
+  padding-right: 8vw;
+}
+.explore-section .explore-section-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.explore-section .explore-section-top img {
+  width: 40%;
+  border: 2px solid black;
+}
+.explore-section .explore-section-top img:nth-of-type(1) {
+  margin-right: 1em;
+}
+.explore-section .explore-section-mid {
+  font-size: 0.8rem;
+  padding-top: 0.6em;
+  width: calc(80% + 8px + 16px);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.explore-section .explore-section-bottom {
+  position: relative;
+  border: 1px solid red;
+  margin-top: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.explore-section .explore-section-bottom a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+.explore-section .explore-section-bottom a img {
+  width: 60px;
+}
+.explore-section .explore-section-bottom .circle-arrow {
+  position: absolute;
+}
+.explore-section .explore-section-bottom .circle-arrow a {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
