@@ -2,6 +2,8 @@ body {
   background-color: #fcf9ee;
   font-family: Favorit, sans-serif;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 header {
   display: flex;
@@ -104,4 +106,119 @@ header {
   position: absolute;
   right: 0;
   top: 0;
+}
+.moving-bar {
+  width: 100%;
+  padding: 5em 0;
+}
+.moving-bar .moving-bar-container {
+  overflow: hidden;
+  width: inherit;
+  height: 5vw;
+  border: 2px black;
+  border-style: solid none;
+  background-color: #ddc92a;
+}
+.moving-bar .moving-bar-container .moving-bar-animation-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: inherit;
+}
+.moving-bar .moving-bar-container .moving-bar-animation-container div {
+  flex-shrink: 0;
+  width: 378px;
+}
+.moving-bar .moving-bar-container .moving-bar-animation-container div h1 {
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+.who-we-are {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  width: 80%;
+  padding: 7vw 8vw 7vw 0;
+}
+.who-we-are .who-we-are-container p {
+  font-size: calc(1rem + 3vw);
+  line-height: calc(0.7em + 8px);
+  text-transform: none;
+}
+.who-we-are .who-we-are-container p span {
+  font-size: 0.5em;
+  text-decoration: underline;
+  vertical-align: top;
+  line-height: 1;
+  text-transform: uppercase;
+  padding-right: 5vw;
+}
+.who-we-are .who-we-are-container p a {
+  color: black;
+}
+.shoes-slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.shoes-slide .shoes-slide-box {
+  background-color: #e7d6c4;
+  border: 1px solid black;
+  width: 29vw;
+  height: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.shoes-slide .shoes-slide-box .shoes-slide-box-shoe-img {
+  width: inherit;
+  height: 20vw;
+  object-fit: cover;
+}
+.shoes-slide .shoes-slide-box .shoes-slide-box-unisex-img {
+  width: 10vw;
+}
+.shoes-slide .shoes-slide-box p {
+  margin: 0;
+}
+.shoes-slide .shoes-slide-box .the-eye {
+  font-size: calc(1rem + 7vw);
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.shoes-slide .shoes-slide-box .price {
+  font-size: calc(1rem + 1.5vw);
+  line-height: 4vw;
+  letter-spacing: -0.1em;
+}
+.shoes-slide .shoes-slide-box .line-through {
+  text-decoration: line-through;
+}
+.moving-bar-animation {
+  animation-name: movingBar;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+@keyframes movingBar {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.center-element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
