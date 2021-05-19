@@ -83,8 +83,9 @@ header {
 }
 .explore-section .explore-section-bottom {
   position: relative;
-  border: 1px solid red;
+  width: 100%;
   margin-top: 3em;
+  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -95,17 +96,13 @@ header {
   color: black;
   text-decoration: none;
   font-weight: bold;
+  margin-right: 2em;
 }
-.explore-section .explore-section-bottom a img {
-  width: 60px;
-}
-.explore-section .explore-section-bottom .circle-arrow {
-  position: absolute;
-}
-.explore-section .explore-section-bottom .circle-arrow a {
+.explore-section .explore-section-bottom .circle-arrow img {
   position: absolute;
   right: 0;
   top: 0;
+  width: 60px;
 }
 .moving-bar {
   width: 100%;
@@ -159,11 +156,21 @@ header {
   color: black;
 }
 .shoes-slide {
+  position: relative;
+  width: 100%;
+  height: 45vw;
+  overflow: hidden;
+}
+.shoes-slide .shoes-slide-inner {
+  position: absolute;
+  width: 160%;
+  padding-left: 12vw;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+  pointer-events: none;
 }
 .shoes-slide .shoes-slide-box {
   background-color: #e7d6c4;

@@ -63,23 +63,22 @@ header {
 	}
 	.explore-section-bottom {
 		position: relative;
-		border: 1px solid red;
+		width: 100%;
 		margin-top: 3em;
+		height: 60px;
 		.flex-parent(@direction:row,@justify-content: flex-end);
 		a {
 			color: black;
 			text-decoration: none;
 			font-weight: bold;
-			img {
-				width: 60px;
-			}
+			margin-right: 2em;
 		}
 		.circle-arrow {
-			position: absolute;
-			a {
+			img {
 				position: absolute;
 				right: 0;
 				top: 0;
+				width: 60px;
 			}
 		}
 	}
@@ -134,7 +133,17 @@ header {
 	}
 }
 .shoes-slide {
-	.flex-parent(@direction:row);
+	position: relative;
+	width: 100%;
+	height: 45vw;
+	overflow: hidden;
+	.shoes-slide-inner {
+		position: absolute;
+		width: 160%;
+		padding-left: 12vw;
+		.flex-parent(@direction:row,@justify-content: space-between);
+		pointer-events: none;
+	}
 	.shoes-slide-box {
 		background-color: #e7d6c4;
 		border: 1px solid black;
