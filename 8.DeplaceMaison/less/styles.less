@@ -6,22 +6,46 @@ body {
 	padding: 0;
 }
 header {
-	.flex-parent(@direction:row,@justify-content:space-between,@align-items: flex-start);
 	position: fixed;
-	width: calc(100% - 4vw);
+	padding: 3vw;
 	z-index: 100;
-	padding: 2vw;
-	.header-left img {
-		width: 4vw;
+	width: calc(100% - 6vw);
+	.header-container {
+		.flex-parent(@direction:row,@justify-content:space-between,@align-items: flex-start);
+		.header-left {
+			height: 10em;
+			width: 4em;
+			.header-left-bg {
+				background-image: url('../images/nav-left2.svg');
+				background-position: 50% 50%;
+				background-size: auto;
+				background-repeat: no-repeat;
+				height: 100%;
+			}
+		}
+		.header-center {
+			font-family: 'Kaushan Script', cursive;
+			letter-spacing: -0.1em;
+			.header-center-bg {
+				background-image: url("../images/nav-center-bg.svg");
+				background-position: 50% 50%;
+				background-size: auto;
+				background-repeat: no-repeat;
+			}
+		}
 	}
-	.header-center {
-		font-family: 'Kaushan Script', cursive;
-		letter-spacing: -0.1em;
-		.header-center-bg {
-			background-image: url("../images/nav-center-bg.svg");
-			background-position: 50% 50%;
-			background-size: auto;
-			background-repeat: no-repeat;
+	@media screen and (max-width: 990px) {
+		padding: 5vw;
+		width: calc(100% - 10vw);
+		.header-container {
+			align-items: center;
+			.header-left {
+				height: 3em;
+				width: 8em;
+				.header-left-bg {
+					background-image: url('../images/nav-left.svg');
+				}
+			}
 		}
 	}
 }
@@ -36,6 +60,9 @@ header {
 		line-height: 1.7;
 		font-weight: 600;
 	}
+	@media screen and (max-width: 990px) {
+		display: none;
+	}
 }
 .main {
 	.flex-parent(@align-items:flex-end);
@@ -43,15 +70,17 @@ header {
 .spring-summer {
 	width: 80%;
 	padding: 8vw 8vw 0 0;
+	margin-top: 3em;
 	text-align: right;
 	h1 {
 		margin: 0;
-		font-size: calc(1rem + 12vw);
-		line-height: calc(0.8em + 10px);
+		font-size: 14vw;
+		line-height: calc(0.5em + 10px);
 		letter-spacing: -0.1em;
 	}
 	div {
 		.flex-parent(@direction:row,@justify-content: flex-end);
+
 		h3 {
 			font-size: calc(1rem + 4vw);
 			font-weight: lighter;
@@ -64,6 +93,11 @@ header {
 				display: block;
 				text-align: center;
 			}
+		}
+	}
+	@media screen and (max-width: 990px) {
+		h1 {
+			line-height: 5vw;
 		}
 	}
 }
@@ -108,20 +142,32 @@ header {
 		position: relative;
 		width: 100%;
 		margin-top: 3em;
-		height: 60px;
+		height: 5vw;
 		.flex-parent(@direction:row,@justify-content: flex-end);
 		a {
 			color: black;
 			text-decoration: none;
 			font-weight: bold;
-			margin-right: 2em;
+			margin-right: 1.5em;
+			font-size: 1.5vw;
 		}
 		.circle-arrow {
-			img {
+			position: relative;
+			height: inherit;
+			.circle {
 				position: absolute;
 				right: 0;
 				top: 0;
-				width: 60px;
+				width: 5vw;
+				max-width: 5vw;
+			}
+			.arrow {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 3vw;
+				max-width: 3vw;
 			}
 		}
 	}
@@ -133,7 +179,7 @@ header {
 		overflow: hidden;
 		width: inherit;
 		height: 5vw;
-		border: 2px black;
+		border: 3px black;
 		border-style: solid none;
 		background-color: #ddc92a;
 		.moving-bar-animation-container {
@@ -143,13 +189,21 @@ header {
 			height: inherit;
 			div {
 				flex-shrink: 0;
-				width: 378px;
+				width: 40vw;
 				h1 {
 					font-weight: 400;
 					letter-spacing: -.06em;
+					font-size: 2.5vw;
 				}
 			}
 		}
+		@media screen and (max-width: 990px) {
+			border: 1px black;
+			border-style: solid none;
+		}
+	}
+	@media screen and (max-width: 767px) {
+		padding: 4em 0 0 0;
 	}
 }
 .who-we-are {
@@ -157,12 +211,13 @@ header {
 	width: 80%;
 	padding: 7vw 8vw 7vw 0;
 	.who-we-are-container {
+		width: 83%;
 		p {
 			font-size: calc(1rem + 3vw);
-			line-height: calc(0.7em + 8px);
+			line-height: calc(0.5em + 2vw);
 			text-transform: none;
 			span {
-				font-size: 0.5em;
+				font-size: calc(0.5rem + 1vw);
 				text-decoration: underline;
 				vertical-align: top;
 				line-height: 1;
@@ -174,24 +229,39 @@ header {
 			}
 		}
 	}
+	@media screen and (max-width: 767px) {
+		width: 90%;
+		.who-we-are-container p {
+			font-size: 4vw;
+		}
+	}
 }
 .shoes-slide {
 	position: relative;
 	width: 100%;
-	height: 45vw;
+	height: 46vw;
 	overflow: hidden;
+	@media screen and (max-width: 767px) {
+		height: 50vw;
+	}
 	.shoes-slide-inner {
 		position: absolute;
 		width: 160%;
-		padding-left: 12vw;
+		padding-left: 26vw;
 		.flex-parent(@direction:row,@justify-content: space-between);
 		pointer-events: none;
+		@media screen and (max-width: 767px) {
+			padding-left: 17vw;
+		}
 	}
 	.shoes-slide-box {
 		background-color: #e7d6c4;
-		border: 1px solid black;
+		border: 2px solid black;
 		width: 29vw;
 		height: 45vw;
+		@media screen and (max-width: 767px) {
+			height: 49vw;
+		}
 		.flex-parent(@justify-content: flex-start);
 		.shoes-slide-box-shoe-img {
 			width: inherit;
@@ -218,34 +288,53 @@ header {
 		.line-through {
 			text-decoration: line-through;
 		}
+		@media screen and (max-width: 767px) {
+			border: 1px solid black;
+			.the-eye {
+				font-size: 9vw;
+			}
+			.price {
+				font-size: 4vw;
+			}
+		}
 	}
 }
 .names-section {
 	width: 80%;
 	max-width: 100%;
 	padding: 8vw 8vw 8vw 0;
+	@media screen and (min-width: 990px) {
+		width: 50%;
+	}
 	.names-container {
 		.flex-parent(@direction:row,@align-items:start );
 		.names-container-left {
 			position: relative;
-			flex: 1 1 45%;
+			flex: 1 1 50%;
 			img {
 				position: absolute;
 				width: 10vw;
 			}
-			.names-container-left-names {
+			.names-container-left-names h3 {
 				font-size: calc(1rem + 1vw);
 				font-family: 'Kaushan Script', cursive;
 				position: absolute;
 				top: -50%;
-				left: 1em;
+				left: 0.7em;
+				width: 100%;
+				@media screen and (max-width: 767px) {
+					font-size: 2.8vw;
+				}
 			}
 		}
 		.names-container-right {
-			flex: 1 1 60%;
-			height: 7.5vw;
+			flex: 1 1 50%;
 			p {
+				font-size: calc(0.5rem + 1vw);
 				text-transform: none;
+				@media screen and (max-width: 767px) {
+					font-size: 2vw;
+				}
 			}
 		}
 	}
@@ -271,6 +360,10 @@ footer {
 		.flex-parent(@direction:row,@justify-content:space-between,@align-items: flex-start);
 		h5 {
 			margin: 0 0 1vw 0;
+			font-size: 2vw;
+			@media screen and (min-width: 990px) {
+				font-size: 1vw;
+			}
 		}
 		.footer-top-subscribe {
 			img {
@@ -284,7 +377,7 @@ footer {
 				border-color: #141414;
 				background-color: transparent;
 				color: #141414;
-				font-size: 1em;
+				font-size: 2vw;
 				width: 25vw;
 				line-height: 4vw;
 			}
@@ -294,6 +387,10 @@ footer {
 				position: relative;
 				bottom: 0;
 				right: 5.2vw;
+				font-size: 2vw;
+				@media screen and (min-width: 990px) {
+					font-size: 1vw;
+				}
 			}
 		}
 		.footer-top-info,
@@ -313,13 +410,13 @@ footer {
 				position: absolute;
 				right: 0;
 				top: 0;
-				width: 60px;
+				width: 4vw;
 				transform: rotate(-90deg);
 			}
 		}
 		.footer-bottom-social-apps {
 			img {
-				width: 16px;
+				width: 2vw;
 			}
 		}
 		.footer-lower-text {
