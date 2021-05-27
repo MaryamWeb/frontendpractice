@@ -1,3 +1,24 @@
+$(document).ready(function() {
+	$('#work-hover').hover(function() {
+		$('.wrapper').toggleClass('blur-wrapper');
+	});
+	$('#lets-talk-hover').hover(function() {
+		$('.wrapper').toggleClass('blur-wrapper');
+	});
+	$('.change-images-img').mouseover(function() {
+		$(this).css({ width: '98%', height: '48vw' });
+	});
+	$('.change-images-img').mouseout(function() {
+		$(this).css({ width: '100%', height: '50vw' });
+	});
+	$('.footer-lg').mouseover(function() {
+		$('.footer-bg-img').css('height', '60px');
+	});
+	$('.footer-lg').mouseout(function() {
+		$('.footer-bg-img').css('height', '50px');
+	});
+});
+
 let timer;
 
 const images = [
