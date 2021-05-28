@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	$(function() {
+		new WOW().init();
+	});
 	$('#work-hover').hover(function() {
 		$('.wrapper').toggleClass('blur-wrapper');
 	});
@@ -18,7 +21,6 @@ $(document).ready(function() {
 		$('.footer-bg-img').css('height', '50px');
 	});
 });
-
 let timer;
 
 const images = [
