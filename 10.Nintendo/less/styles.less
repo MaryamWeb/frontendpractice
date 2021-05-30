@@ -2,14 +2,18 @@
 @color-dark-light: #efefef;
 @color-light: #ffffff;
 @color-accent: #e31e3c;
+@color-accent-light: #d6f0fa;
+@color-accent-dark: #0b2b6b;
 body {
 	font-family: sans-serif;
+	color: @color-dark;
 	margin: 0;
 	padding: 0;
 	font-size: 1em;
 }
 a {
 	text-decoration: none;
+	color: @color-dark;
 }
 .nav-container {
 	width: 100%;
@@ -48,11 +52,142 @@ a {
 		}
 		.nav-top-links {
 			a {
-				color: @color-dark;
 				padding-right: 1em;
 				&:hover {
 					color: @color-accent;
 				}
+			}
+		}
+	}
+	.nav-bottom {
+		.flex-parent( );
+		border-bottom: 1px solid #dadada;
+		.nav-bottom-container {
+			.flex-parent(@direction:row );
+			a {
+				.flex-parent(@direction:row);
+				padding: 0.7em;
+			}
+			svg {
+				height: 20px;
+				width: 20px;
+				padding-right: 0.4em;
+				fill: currentColor;
+			}
+		}
+	}
+}
+.hero-section {
+	background-color: @color-accent-light;
+	div {
+		width: 100%;
+		max-width: 1089px;
+		margin: 0 auto;
+		position: relative;
+		top: 30px;
+		@media screen and (max-width: 1135px) {
+			max-width: 95%;
+		}
+		@media screen and (max-width: 769px) {
+			max-width: 100%;
+			top: 0;
+		}
+		.hero-section-img {
+			width: 100%;
+			@media screen and (max-width: 1135px) {
+				width: inherit;
+			}
+		}
+		.hero-section-e10 {
+			position: absolute;
+			bottom: 70px;
+			right: -70px;
+			width: 4em;
+			@media screen and (max-width: 1270px) {
+				right: 10px;
+				bottom: 15px;
+			}
+			@media screen and (max-width: 768px) {
+				display: none;
+			}
+		}
+	}
+}
+.stardew-buy-digital-section {
+	.stardew-buy-digital-wrapper {
+		width: 80%;
+		padding: 4em 0;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr auto;
+		grid-gap: 0 1em;
+		.nintendo-switch-box {
+			grid-column: 1 / span 2;
+			p {
+				border-bottom: 3px solid @color-accent;
+				padding-bottom: 0.3em;
+				display: inline-block;
+			}
+		}
+		.stardew-left-content {
+			h2 {
+				margin-top: 0;
+			}
+			h3 {
+				color: @color-accent;
+			}
+		}
+		.stardew-right-content {
+			.flex-parent(@direction:row,@align-items: flex-start);
+			h2 {
+				padding-right: 1em;
+				margin: 0;
+			}
+			.stardew-right-content-column {
+				.button-buy {
+					background-color: @color-accent;
+					color: white;
+					font-size: 1.3em;
+					padding: 0.7em;
+					border-radius: 5px;
+					i {
+						float: right;
+					}
+				}
+				img {
+					vertical-align: middle;
+					width: 25px;
+					height: 25px;
+				}
+			}
+		}
+		.wish-sm {
+			display: none;
+		}
+	}
+	@media screen and (max-width: 769px) {
+		.stardew-buy-digital-wrapper {
+			width: 95%;
+			padding: 0;
+			.flex-parent(@align-items: flex-start);
+			.stardew-left-content {
+				.wish-lg {
+					display: none;
+				}
+			}
+			.stardew-right-content {
+				flex-direction: column;
+				width: 100%;
+				h2 {
+					margin-bottom: 0.7em;
+				}
+				.stardew-right-content-column {
+					width: inherit;
+				}
+			}
+			.wish-sm {
+				display: block;
+				color: @color-accent;
 			}
 		}
 	}
