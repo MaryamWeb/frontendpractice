@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	checkWidth();
+	$(window).resize(checkWidth);
 	let content = document.getElementsByClassName('accordion');
 
 	for (let c of content) {
@@ -17,6 +19,12 @@ $(document).ready(function() {
 			}
 		});
 	}
+	$('.show-strikes').mouseover(function() {
+		$(this).find('.sparks').css('opacity', 1);
+	});
+	$('.show-strikes').mouseout(function() {
+		$(this).find('.sparks').css('opacity', 0);
+	});
 });
 
 let slideIndex = 1;
@@ -46,3 +54,8 @@ const showSlides = (x) => {
 	if (x < 1) slideIndex = slides.length; //reset Prev to last
 	setCSS(slideIndex);
 };
+function checkWidth() {
+	$(window).width() < 981
+		? $('input').attr('placeholder', 'Search')
+		: $('input').attr('placeholder', 'Search games, systems, support, etc');
+}

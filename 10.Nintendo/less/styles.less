@@ -1,9 +1,11 @@
 @color-dark: #434242;
 @color-dark-light: #efefef;
 @color-light: #ffffff;
-@color-accent: #e31e3c;
+@color-accent: #e60012;
+@color-accent-hover: #c00716;
 @color-accent-light: #d6f0fa;
 @color-font: #5f5d5d;
+@border-color: #dadada;
 body {
 	font-family: sans-serif;
 	color: @color-dark;
@@ -22,18 +24,8 @@ p {
 	width: 100%;
 	.nav-top {
 		width: 100%;
-		border-bottom: 1px solid #dadada;
+		border-bottom: 1px solid @border-color;
 		.flex-parent(@direction:row);
-		.logo {
-			background-color: #e60012;
-			width: 140px;
-			height: 55px;
-			position: relative;
-			svg {
-				fill: #fff;
-				.center-element();
-			}
-		}
 		.nav-top-search {
 			flex: 1;
 			.flex-parent(@direction:row,@justify-content: flex-start);
@@ -44,6 +36,9 @@ p {
 				border-bottom: 1px solid black;
 				background-color: transparent;
 				height: 33px;
+				@media screen and (max-width: 981px) {
+					border-bottom: none;
+				}
 			}
 			input {
 				border: none;
@@ -51,6 +46,10 @@ p {
 				width: 300px;
 				height: 30px;
 				padding-left: 1em;
+				@media screen and (max-width: 981px) {
+					border-bottom: none;
+					width: auto;
+				}
 			}
 		}
 		.nav-top-links {
@@ -64,12 +63,15 @@ p {
 	}
 	.nav-bottom {
 		.flex-parent( );
-		border-bottom: 1px solid #dadada;
+		border-bottom: 1px solid @border-color;
 		.nav-bottom-container {
 			.flex-parent(@direction:row );
 			a {
 				.flex-parent(@direction:row);
 				padding: 0.7em;
+				&:hover {
+					color: @color-accent;
+				}
 			}
 			svg {
 				height: 20px;
@@ -78,6 +80,31 @@ p {
 				fill: currentColor;
 			}
 		}
+	}
+}
+.nav-container-sm {
+	display: none;
+	.nav-links {
+		a:hover {
+			color: @color-accent;
+		}
+		button {
+			margin: 0 1em;
+			background-color: transparent;
+			border: none;
+			i {
+				font-size: 1.5em;
+				cursor: pointer;
+			}
+		}
+	}
+}
+@media screen and (max-width: 769px) {
+	.nav-container {
+		display: none;
+	}
+	.nav-container-sm {
+		.flex-parent(@direction:row,@justify-content:space-between);
 	}
 }
 .hero-section {
@@ -94,6 +121,7 @@ p {
 		@media screen and (max-width: 769px) {
 			max-width: 100%;
 			top: 0;
+			background-color: @color-light;
 		}
 		.hero-section-img {
 			width: 100%;
@@ -119,6 +147,7 @@ p {
 .stardew-buy-digital-section {
 	.stardew-buy-digital-wrapper {
 		width: 80%;
+		max-width: 1180px;
 		padding: 4em 0;
 		margin: 0 auto;
 		display: grid;
@@ -131,9 +160,7 @@ p {
 			h2 {
 				margin-top: 0;
 			}
-			h3 {
-				color: @color-accent;
-			}
+			.heart-and-container();
 		}
 		.stardew-right-content {
 			.flex-parent(@direction:row,@align-items: flex-start);
@@ -148,10 +175,14 @@ p {
 						float: right;
 					}
 				}
-				img {
-					vertical-align: middle;
-					width: 25px;
-					height: 25px;
+				p {
+					cursor: pointer;
+					.undeline-hover-animation();
+					img {
+						vertical-align: middle;
+						width: 25px;
+						height: 25px;
+					}
 				}
 			}
 		}
@@ -181,7 +212,7 @@ p {
 			}
 			.wish-sm {
 				display: block;
-				color: @color-accent;
+				.heart-and-container();
 			}
 		}
 	}
@@ -190,6 +221,7 @@ p {
 	background-color: @color-accent-light;
 	.slider-images-wrapper {
 		width: 80%;
+		max-width: 1180px;
 		padding: 3em 0;
 		margin: 0 auto;
 		.flex-parent();
@@ -211,6 +243,12 @@ p {
 					object-fit: cover;
 					width: 100%;
 				}
+				@media screen and (max-width: 769px) {
+					grid-template-columns: repeat(2, 1fr);
+					.slider-biggest-img {
+						grid-column: span 2;
+					}
+				}
 			}
 		}
 		.slider-images-wrapper-bottom {
@@ -222,6 +260,13 @@ p {
 				color: #0b2b6b;
 				svg {
 					cursor: pointer;
+					transition: color 100ms ease-in;
+					&:hover {
+						color: #0467c4;
+					}
+				}
+				@media screen and (max-width: 769px) {
+					display: none;
 				}
 			}
 			.next-arrow-rotate {
@@ -240,17 +285,12 @@ p {
 				background-color: #0467c4;
 			}
 		}
-		@media screen and (max-width: 769px) {
-			grid-template-columns: repeat(2, 1fr);
-			.slider-biggest-img {
-				grid-column: span 2;
-			}
-		}
 	}
 }
 .main-content-section {
 	.main-content-wrapper {
 		width: 80%;
+		max-width: 1180px;
 		padding: 3em 0;
 		margin: 0 auto;
 		.main-content-text {
@@ -261,6 +301,9 @@ p {
 		.button-explore {
 			.red-button();
 			display: inline-block;
+			i {
+				padding-left: 1em;
+			}
 		}
 		.resize-width-wrapper();
 	}
@@ -268,6 +311,7 @@ p {
 .info-section {
 	.info-wrapper {
 		width: 80%;
+		max-width: 1180px;
 		padding: 3em 0 1em 0;
 		margin: 0 auto;
 		display: grid;
@@ -309,6 +353,7 @@ p {
 .support-play-section {
 	.support-play-wrapper {
 		width: 80%;
+		max-width: 1180px;
 		margin: 0 auto;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -338,6 +383,9 @@ p {
 				a {
 					color: @color-accent;
 					text-decoration: underline;
+					&:hover {
+						color: @color-accent-hover;
+					}
 				}
 			}
 		}
@@ -381,6 +429,7 @@ p {
 	margin: 1em 0;
 	.online-wrapper {
 		width: 80%;
+		max-width: 1180px;
 		margin: 0 auto;
 		background-color: @color-dark-light;
 		display: grid;
@@ -399,11 +448,18 @@ p {
 		}
 		.learn-more {
 			font-size: 1.5em;
+			font-weight: bold;
+			.undeline-hover-animation();
 		}
 		.button-game-support {
 			.red-button();
-			padding: 0.7em;
-			font-size: 1em;
+			padding: 0.4em 0.5em;
+			margin-right: 0.3em;
+			display: inline-block;
+			a {
+				color: @color-light;
+				font-size: 0.8em;
+			}
 		}
 		.resize-width-wrapper();
 		@media screen and (max-width: 769px) {
@@ -424,6 +480,7 @@ p {
 .online-membership-text-section {
 	.online-membership-text-wrapper {
 		width: 80%;
+		max-width: 1180px;
 		padding: 5em 0;
 		margin: 0 auto;
 		border-bottom: 1px solid #dadada;
@@ -433,6 +490,9 @@ p {
 		a {
 			color: @color-accent;
 			text-decoration: underline;
+			&:hover {
+				color: @color-accent-hover;
+			}
 		}
 		.resize-width-wrapper();
 	}
@@ -440,22 +500,46 @@ p {
 .recently-viewed-section {
 	.recently-viewed-wrapper {
 		width: 80%;
+		max-width: 1180px;
 		padding: 3em 0;
 		margin: 0 auto;
 		.recently-viewed-container {
 			.flex-parent(@direction:row,@align-items:flex-start,@flex-wrap: wrap);
 			.recently-viewed-item {
-				width: 230px;
 				padding: 1em;
-				img {
-					width: inherit;
-					border-radius: 5px;
+				.img-container {
+					position: relative;
+					max-width: 230px;
+					img {
+						border-radius: 5px;
+						max-width: 100%;
+						max-height: 100%;
+						vertical-align: middle;
+					}
+					span:before {
+						content: "";
+						position: absolute;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						border-radius: 5px;
+						opacity: 0;
+						transition: opacity 200ms ease-in-out;
+						background-color: @color-dark;
+					}
+					span:hover:before {
+						transition: opacity 200ms ease-in-out;
+						opacity: 0.3;
+						cursor: pointer;
+					}
 				}
-				h3 {
-					margin-bottom: 0;
+				.nintendo-switch-box {
+					.flex-parent(@direction:row,@justify-content:space-between);
+					.heart-and-container();
 				}
 				@media screen and (max-width: 769px) {
-					width: 130px;
+					width: 150px;
 				}
 			}
 		}
@@ -466,6 +550,7 @@ p {
 	background-color: @color-dark-light;
 	.footer-top-wrapper {
 		width: 80%;
+		max-width: 1180px;
 		padding: 2em 0;
 		margin: 0 auto;
 		.flex-parent(@direction:row,@justify-content:space-between,@align-items:flex-start,@flex-wrap: wrap);
@@ -520,6 +605,10 @@ p {
 					font-weight: 300;
 					a {
 						color: #484848b4;
+						&:hover {
+							text-decoration: underline;
+							color: #0467c4;
+						}
 					}
 				}
 			}
@@ -542,7 +631,10 @@ p {
 				.flex-parent(@direction:row,@justify-content:space-between);
 			}
 			.footer-bottom-text1 a {
-				color: #dadada;
+				color: @border-color;
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 			.footer-bottom-links-box {
 				grid-row: 2 / 3;
@@ -575,8 +667,14 @@ p {
 			p {
 				font-size: .7em;
 				text-align: center;
-				color: #dadada;
-				line-height: 0.8;
+				color: @border-color;
+
+				a {
+					color: @border-color;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
 			}
 		}
 	}
@@ -616,12 +714,28 @@ p {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+.nintendo-nav-logo {
+	background-color: #e60012;
+	width: 140px;
+	height: 55px;
+	position: relative;
+	svg {
+		fill: #fff;
+		.center-element();
+	}
+}
 .red-button {
 	background-color: @color-accent;
 	color: white;
 	font-size: 1.3em;
 	padding: 0.7em;
 	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 300ms ease-out 25ms, transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	&:hover {
+		background-color: @color-accent-hover;
+		transform: scale(1.05);
+	}
 }
 .nintendo-switch-box {
 	p {
@@ -629,6 +743,45 @@ p {
 		padding-bottom: 0.3em;
 		display: inline-block;
 		font-size: 0.9em;
+	}
+}
+.undeline-hover-animation(@color:@color-dark) {
+	span {
+		position: relative;
+	}
+	span:before {
+		content: "";
+		position: absolute;
+		right: 6px;
+		inset: 0px;
+		opacity: 0;
+		border-bottom: 2px solid @color;
+		padding-bottom: 1.5em;
+		transition: opacity 200ms ease-in-out;
+	}
+	span:hover:before {
+		transition: opacity 200ms ease-in-out;
+		opacity: 1;
+	}
+}
+.heart-and-container {
+	h3 {
+		color: @color-accent;
+		.undeline-hover-animation(@color:@color-accent-hover);
+		cursor: pointer;
+		display: inline-block;
+		.heart-spark {
+			width: 2em;
+			height: 2em;
+			vertical-align: middle;
+		}
+		.sparks {
+			opacity: 0;
+			transition: opacity 200ms ease-in-out 2ms;
+		}
+		&:hover {
+			color: @color-accent-hover;
+		}
 	}
 }
 .usa-flag {
