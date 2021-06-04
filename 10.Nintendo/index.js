@@ -58,4 +58,25 @@ function checkWidth() {
 	$(window).width() < 981
 		? $('input').attr('placeholder', 'Search')
 		: $('input').attr('placeholder', 'Search games, systems, support, etc');
+
+	if ($(window).width() > 769) {
+		closeSideNav();
+	}
+}
+function openCloseSideNav() {
+	$('.nav-side').toggleClass('is-active');
+	$('.nav-container-sm').toggleClass('fixed-top');
+	if ($('#open-close-icon').hasClass('fa-bars')) {
+		$('.overlay').css({ opacity: '0.8', 'pointer-events': 'auto' });
+		$('#open-close-icon').addClass('fa-times').removeClass('fa-bars');
+	} else {
+		$('.overlay').css({ opacity: '0', 'pointer-events': 'none' });
+		$('#open-close-icon').addClass('fa-bars').removeClass('fa-times');
+	}
+}
+function closeSideNav() {
+	$('.nav-side').removeClass('is-active');
+	$('.nav-container-sm').removeClass('fixed-top');
+	$('.overlay').css({ opacity: '0', 'pointer-events': 'none' });
+	$('#open-close-icon').addClass('fa-bars').removeClass('fa-times');
 }
