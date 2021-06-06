@@ -111,6 +111,19 @@ nav {
 		}
 	}
 }
+footer {
+	background-color: @color-light-dark;
+	padding: 1em 0;
+	.footer-wrapper {
+		width: 80%;
+		max-width: 1300px;
+		margin: 0 auto;
+		.flex-parent();
+		p {
+			color: @color-dark-dark;
+		}
+	}
+}
 .flex-parent(@direction:column,@justify-content:center,@align-items:center,@flex-wrap:nowrap) {
 	display: flex;
 	flex-direction: @direction;

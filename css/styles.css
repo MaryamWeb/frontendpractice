@@ -119,3 +119,20 @@ nav .nav-wrapper h1 {
     padding-bottom: 30px;
   }
 }
+footer {
+  background-color: #d7d1c5;
+  padding: 1em 0;
+}
+footer .footer-wrapper {
+  width: 80%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+footer .footer-wrapper p {
+  color: #634b3f;
+}
