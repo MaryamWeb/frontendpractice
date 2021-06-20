@@ -4,3 +4,5 @@ My project as a part of the [Frontend Practice](https://www.frontendpractice.com
 
 All websites were built using HTML, CSS, Less and JavaScript.
 
+## Project Screenshot:
+![alt text](screenshot.png "Homepage")
